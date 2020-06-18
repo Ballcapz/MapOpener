@@ -1,7 +1,47 @@
 ﻿@page "/"
+@using Data
+
 
 <h1>Open a map</h1>
 
 <button onclick="mapSelector()">Open Maps</button>
 
 
+<EditForm Model="address" OnValidSubmit="HandleNewAddress">
+
+    <InputText @bind-Value="address.Address" class="address input"></InputText>
+
+    <button type="submit">Add address</button>
+</EditForm>
+
+
+@if (!AllAddresses.Any())
+{
+    <div>No addresses...</div>
+}
+else
+{
+    <h2>Addresses.</h2>
+
+    @foreach (var addr in AllAddresses)
+    {
+        <div>@addr.Address</div>
+    }
+}
+
+
+
+@code {
+
+    private List<MapData> AllAddresses = new List<MapData>();
+
+    private MapData address = new MapData();
+
+
+    public void HandleNewAddress()
+    {
+        AllAddresses.Add(address);
+        address = new MapData();
+    }
+
+}
