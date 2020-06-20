@@ -1,0 +1,59 @@
+body {
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.map-open {
+  width: 175px;
+  height: 3rem;
+  background: #157dfa;
+  color: #fafafa;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  transition: all 0.2s ease-in-out;
+  
+  
+  margin-bottom: 1rem;
+  
+}
+
+.map-open:hover {
+  background: #fafafa;
+  color: #157dfa;
+  border: 1px solid #156dfa;
+}
+
+.address-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.address-form .input {
+  margin: 0.5rem;
+}
+
+.address-form .input:last-child {
+  margin-top: 1rem;
+}
+
+input[type="submit"] {
+  width: 175px;
+  height: 3rem;
+  background: #157dfa;
+  color: #fafafa;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  transition: all 0.2s ease-in-out;
+  
+  margin-bottom: 1rem;
+}
+
+
